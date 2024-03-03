@@ -56,14 +56,20 @@ body{
 
 .prompt{
   flex: 0 0 45%; /* Adjust the percentage based on your layout requirements */
-    margin: 1%; /* Add margin for spacing between the boxes */
-    background-color: #e0e0e0;
-    padding: 10px;
+     margin: 1%; 
+    padding: auto;
     box-sizing: border-box;
     max-height: 5vh;
+    background: #e4e4e6; 
+    font: 0.9em sans-serif;
+
 }
 
+.clicked{
+  background: black;
+  color: #fff;
 
+}
 .messagebar{
   position: fixed;
   bottom: 0;
@@ -115,4 +121,10 @@ body{
 .message-box{
   height: calc(100vh - 5rem);
   overflow-y: auto;
+}
+
+.rocketgpt{
+  background-color: rgb(245, 238, 23);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: xx-large;
 }
