@@ -1,7 +1,7 @@
 const messageBar = document.querySelector(".bar-wrapper input");
 const sendBtn = document.querySelector(".bar-wrapper button");
 const messageBox = document.querySelector(".message-box");
-const prompt= document.querySelector(".prompt");
+// const prompt= document.querySelector(".prompt");
 var prompt_text='';
 
 let API_URL = "https://api.openai.com/v1/chat/completions";
@@ -9,54 +9,69 @@ let part1= 'sk-quhmITTRn2RWW9ln9be9T3';
 let part2= 'BlbkFJhuqffPxDda0FF0E5ot5X';
 let API_KEY = part1+part2;
 
-prompt.onclick= ()=>{
-if(prompt.value=="10 words"){
-  prompt_text= "Write it in 10 words";
+document.querySelectorAll('.prompt').forEach(function(button) {
+  button.addEventListener('click', function() {
+      clicked(button);
+  });
+});
+
+// The clicked function remains the same
+function clicked(button) {
+  let value = button.value; // Convert to lowercase and remove spaces
+  let btnId = button.getAttribute('data-btn-id');
+  
+  button.classList.add(value, 'clicked'); // Add the class based on the value and 'clicked'
+  
+  // Use the btnId as needed, for example:
+  console.log(`Button with ID ${btnId} and value ${value} clicked`);
+if(value=="explain"){
+  prompt_text= "Kindly offer a comprehensive explanation or solution for the provided code/query at below . Ensure to break down each step, elucidate relevant concepts, and discuss potential alternatives or optimizations. Your elucidation should be accessible to individuals with diverse levels of expertise, catering to both novices and seasoned programmers";
 }
-else if(prompt.value=="50 words"){
-  prompt_text= "Write it in 50 words";
+else if(value=="antiplag"){
+  prompt_text= "Investigating originality:Could you provide a critique or antiplag for the given below of the code/question? This could involve proposing alternative methods, optimizations, or addressing potential pitfalls. Your insights will contribute to a more comprehensive understanding and improvement of the code/question. Thank you for your expertise";
 }
-else if(prompt.value=="100 words"){
-  prompt_text= "Write it in 100 words";
+else if(value=="testcase"){
+  prompt_text= "Constructive feedback requested: Please provide a comprehensive test review for the given below of the code/question. This review should include insights on test coverage, edge cases considered, robustness of inputs, and any potential improvements or optimizations. Your detailed analysis will aid in enhancing the reliability and effectiveness of the code/question. Thank you for your valuable input";
 }
-else if(prompt.value=="300 words"){
-  prompt_text= "Write it in 300 words";
+else if(value=="debug"){
+  prompt_text= "Write it ";
 }
-else if(prompt.value=="500 words"){
+else if("humanify"){
   prompt_text= "Write it in 500 words";
 }
-else if(prompt.value=="1000 words"){
+else if(value=="creator"){
   prompt_text= "Write it in 1000 words";
 }
-else if(prompt.value=="code"){
+else if(value=="pro"){
   prompt_text= "Code it for me";
 }
-else if(prompt.value=="content"){
+else if(value=="basic"){
   prompt_text= "Write a impressive contents for this";
 }
-else if(prompt.value=="story"){
+else if(value=="summary"){
   prompt_text= "Make it a perfect mesmerising story";
 }
-else if(prompt.value=="solve"){
-  prompt_text= "Solve this for me";
+else if(value=="extend"){
+  prompt_text= "following is given text/ question understand this and complete and give text of detailed of it in around 500 words";
 }
-else if(prompt.value=="funny"){
-  prompt_text= "Make it funny for readers to keep readers active to read more";
+else if(value=="analysis"){
+  prompt_text= "following is given text/ question understand this and complete and give text of detailed of it in around 1500 words";
 }
-else if(prompt.value=="emojis"){
-  prompt_text= "Use proper emojis at appropriate places to engage readers";
+else if(value=="sorting"){
+  prompt_text= "following is given text/ question understand this summarize it pointwise beca";
 }
-else if(prompt.value=="vocabulary"){
-  prompt_text= "Use high level vocabulary to make it more attractive";
+else if(value=="smallkids"){
+  prompt_text= "following is given text/ question understand this make it like can be easily understand by 10 year old kid and i know you can do it because smartest AI has great sense of understanding";
 }
-else if(prompt.value=="jokes"){
-  prompt_text= "Convert it into a joke";
+else if(value=="enggspcl"){
+  prompt_text= "following is given text/ question understand this make it joke and i know you can do it because smartest Ai has great sense of humor";
 }
 }
 
 
 
 sendBtn.onclick = function () {
+
   if(messageBar.value.length > 0){
     var UserTypedMessage = messageBar.value+prompt_text;
     var displaymsg= messageBar.value;
