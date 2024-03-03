@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <title>Document</title>
-</head>
-<body>
-  <div class="chatbox-wrapper">
-    <div class="chats">
-      <div class="message-box">
-        <div class="chat response">
-          <img src="img/logo.png">
-          <span>Hello there! <br>
-            How can I help you today.
-          </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="chatbox-wrapper">
+      <div class="chats">
+        <div class="message-box">
+          <div class="chat response">
+            <img src="img/logo.png" />
+            <span
+              >Hello there! <br />
+              How can I help you today.
+            </span>
+          </div>
+        </div>
+        <div class="btn-box">
+    <button class="prompt" id="btn1" value="explain" data-btn-id="btn1">EXPLAIN CODE</button>
+    <button class="prompt" id="btn2" value="antiplag" data-btn-id="btn2">ANTIPLAG CODE</button>
+    <button class="prompt" id="btn3" value="testcase" data-btn-id="btn3">TESTCASE</button>
+    <button class="prompt" id="btn4" value="debug" data-btn-id="btn4">DEBUG</button>
+    <button class="prompt" id="btn5" value="humanify" data-btn-id="btn5">HUMANIFY</button>
+    <button class="prompt" id="btn6" value="creator" data-btn-id="btn6">CREATOR TEXT</button>
+    <button class="prompt" id="btn7" value="pro" data-btn-id="btn7">PRO TEXT</button>
+    <button class="prompt" id="btn8" value="basic" data-btn-id="btn8">BASIC TEXT</button>
+    <button class="prompt" id="btn9" value="summary" data-btn-id="btn9">SUMMARISE</button>
+    <button class="prompt" id="btn10" value="extend" data-btn-id="btn10">EXTEND</button>
+    <button class="prompt" id="btn11" value="analysis" data-btn-id="btn11">ANALYSIS</button>
+    <button class="prompt" id="btn12" value="sorting" data-btn-id="btn12">SORT TO POINT</button>
+    <button class="prompt" id="btn13" value="smallkids" data-btn-id="btn13">FOR KIDS</button>
+    <button class="prompt" id="btn14" value="enggspcl" data-btn-id="btn14">FOR ENGGS</button>
+
+
         </div>
       </div>
-      <div class="btn-box"> 
-<button class="prompt" value="10 words" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">10 words</button>
-<button class="prompt" value="50 words" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">50 words</button>
-<button class="prompt" value="100 words" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">100 words</button>
-<button class="prompt" value="300 words" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">300 words</button>
-<button class="prompt" value="500 words" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">500 words</button>
-<button class="prompt" value="1000 words" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">1000 words</button>
-<button class="prompt" value="code" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">code</button>
-<button class="prompt" value="content" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">content</button>
-<button class="prompt" value="story" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">story</button>
-<button class="prompt" value="solve" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">solve</button>
-<button class="prompt" value="funny" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">funny</button>
-<button class="prompt" value="emojis" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">emojis</button>
-<button class="prompt" value="vocabulary" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">vocabulary</button>
-<button class="prompt" value="jokes" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">jokes</button>
-<button class="prompt" value="abstract" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">abstract</button>
-<button class="prompt" value="abstract" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">abstract</button>
-<button class="prompt" value="abstract" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">abstract</button>
-<button class="prompt" value="abstract" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">abstract</button>
-<button class="prompt" value="abstract" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">abstract</button>
-<button class="prompt" value="abstract" style="background-color: aliceblue; border-radius: 7px; color: black; padding: 5px;">abstract</button>
-      </div>
-    </div>
-    
-    <div class="messagebar">
-      <div class="bar-wrapper" style="margin-right: 50px;">
-        <input type="text" placeholder="Enter your message...">
-        <button>
-          <span class="material-symbols-rounded">
-            send
-            </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+      <div class="messagebar">
+        <div class="bar-wrapper" style="margin-right: 50px">
+          <input type="text" placeholder="Enter your message..." />
+          <button>
+            <span class="material-symbols-rounded"> send </span>
+          </button>
+        </div>
+        <div class="rocketgpt">
+          RocketGPT 🚀
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
